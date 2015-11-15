@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -42,7 +47,7 @@ the minimum, maximum, median, 1st quartile, and 3rd quartile.
 hist(steps.per.day$steps, xlab='Total steps per day', main='')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 #### 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -63,7 +68,7 @@ plot(steps.per.interval, type='l', xlab='5-minute interval',
   ylab='Average number of steps')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
 #### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -139,7 +144,7 @@ hist(steps.per.day.imputed$steps, xlab='Total steps per day',
   main='With imputed data', ylim=c(0,35))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
 
 Note the difference in histograms, especially in the 0-5000 bin decreasing
 when imputed data is added.  This is primary due to days that had zero steps
@@ -176,4 +181,4 @@ activity <- mutate(activity, day_type = factor(sapply(activity$date, cat.day)))
   g
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
